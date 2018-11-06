@@ -1,0 +1,16 @@
+import win32api
+import win32con
+
+'''
+win32api.keybd_event(83,0,0,0)
+win32api.keybd_event(85,0,0,0)
+win32api.keybd_event(78,0,0,0)
+win32api.keybd_event(108,0,0,0)
+win32api.keybd_event(108,0,win32con.KEYEVENTF_KEYUP,0) #释放按键
+
+'''
+
+for i in range(100):
+    print(i)
+    win32api.mouse_event(win32con.MOUSEEVENTF_LEFTDOWN, 0, 0, 1, 0)
+    win32api.mouse_event(win32con.MOUSEEVENTF_LEFTUP, 0, 0, 0, 0)
